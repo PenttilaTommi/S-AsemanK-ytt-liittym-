@@ -1,7 +1,7 @@
 
+# Sääasema
 
-
-# Mikä IoT?
+## Mikä IoT?
 
 ## Sääasemajärjestelmän toimintakaavio
 
