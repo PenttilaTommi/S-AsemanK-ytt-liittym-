@@ -1,24 +1,104 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Chart from "react-google-charts";
+ 
 function App() {
+  const initWeather = []; //tulevia filtteröintejä varten
+  const [weather, setWeather] = useState(initWeather);
+
+ function convertUTCDateToLocalDate(date) {
+  new Date(date.getTime() + date.getTimezoneOffset()*60*1000);
+  return date;
+}
+  let chartHumData = [
+      ['Aika', '%',],
+      ['Loading..', 0]
+     ];
+  let chartTempData = [
+      ['Aika', 'Celsius'],
+      ['Loading..', 0]
+       ];
+  fetch('https:// OMA_httptriggerCSharp_Function_URL&deviceId=Oman_photonin_id&mount=10')
+    .then(response => response.json())
+    .then (json => setWeather([...json]));
+  let humtempkey = 1;
+  const rows = () => weather.map(temphum => {
+    if(chartHumData[1][0] === 'Loading..'){
+      chartHumData.pop();
+    }
+     if(chartTempData[1][0] === 'Loading..'){
+      chartTempData.pop();
+    }
+      chartHumData.push([String(convertUTCDateToLocalDate(new Date(temphum.Timestamp))).split(' ')[4], parseInt(temphum.Hum)])
+      chartTempData.push([String(convertUTCDateToLocalDate(new Date(temphum.Timestamp))).split(' ')[4], parseInt(temphum.Temp)])
+    
+    return <div key={humtempkey++}> 
+    <b>Klo</b> {String(convertUTCDateToLocalDate(new Date(temphum.Timestamp))).split(' ')[4]} <b>Lämpötila</b> {temphum.Temp}°C <b>Ilmankosteus</b> {temphum.Hum}% 
+    </div>
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code>!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div>
+      <Chart
+        width={1400}
+        height={300}
+        chartType="ColumnChart"
+        loader={<div>Loading Chart</div>}
+        data={[
+          ['Aika', '%'],
+          ['klo', 81],
+          ['klo', 37],
+          ['klo', 26],
+          ['klo', 20],
+          ['klo', 15],
+          ['klo', 15],
+          ['klo', 15],
+          ['klo', 15],
+          ['klo', 15],
+          ['klo', 15],
+        ]}
+        options={{
+          title: 'Ilmankosteus',
+          //chartArea: { width: '50%' },
+          hAxis: {
+            title: 'Kosteus %',
+            minValue: 0,
+          },
+          
+        }}
+        legendToggle
+    />
+    </div>
+    <div style={{ display: 'flex', }}>
+          <Chart
+        width={1400}
+        height={300}
+        chartType="LineChart"
+        loader={<div>Loading Chart</div>}
+        data={[
+          ['Aika', 'Lämpötila'],
+          ['klo', 10],
+          ['klo', 11],
+          ['klo', 16],
+          ['klo', 10],
+          ['klo', 10],
+          ['klo', 10],
+          ['klo', 10],
+          ['klo', 10],
+          ['klo', 10],
+          ['klo', 10],
+        ]}
+        options={{
+          title: 'Lämpötila',
+          hAxis: { title: 'Lämpötila °C', titleTextStyle: { color: '#333' } },
+          vAxis: { minValue: 0 },
+          // For the legend to fit, we make the chart area smaller
+          //chartArea: { width: '50%', height: '70%' },
+          // lineWidth: 25
+        }}
+  />
+</div>
     </div>
   );
 }
