@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Chart from "react-google-charts";
  
@@ -6,7 +6,7 @@ function App() {
   const initWeather = []; //tulevia filtteröintejä varten
   const [weather, setWeather] = useState(initWeather);
 
- function convertUTCDateToLocalDate(date) {
+/* function convertUTCDateToLocalDate(date) {
   new Date(date.getTime() + date.getTimezoneOffset()*60*1000);
   return date;
 }
@@ -17,24 +17,27 @@ function App() {
   let chartTempData = [
       ['Aika', 'Celsius'],
       ['Loading..', 0]
-       ];
-  fetch('https:// OMA_httptriggerCSharp_Function_URL&deviceId=Oman_photonin_id&mount=10')
+  ];*/
+  fetch('https://https://oppilas-20.azurewebsites.net/api/HttpTriggerCSharp2?code=Pp4IjFueHvDz/TAbQ6Utb84svgjLa0/dko9NsadNwkKyTUbGWRNCwQ==&deviceId=250034001447393035313136&amount=10')
     .then(response => response.json())
     .then (json => setWeather([...json]));
   let humtempkey = 1;
-  const rows = () => weather.map(temphum => {
-    if(chartHumData[1][0] === 'Loading..'){
+  const rows = () => weather.map(temphum => { //loopataan uusimmat 10
+    
+    
+    /*if(chartHumData[1][0] === 'Loading..'){
       chartHumData.pop();
     }
      if(chartTempData[1][0] === 'Loading..'){
       chartTempData.pop();
     }
       chartHumData.push([String(convertUTCDateToLocalDate(new Date(temphum.Timestamp))).split(' ')[4], parseInt(temphum.Hum)])
-      chartTempData.push([String(convertUTCDateToLocalDate(new Date(temphum.Timestamp))).split(' ')[4], parseInt(temphum.Temp)])
+      chartTempData.push([String(convertUTCDateToLocalDate(new Date(temphum.Timestamp))).split(' ')[4], parseInt(temphum.Temp)])*/
     
-    return <div key={humtempkey++}> 
+    /*return <div key={humtempkey++}> 
     <b>Klo</b> {String(convertUTCDateToLocalDate(new Date(temphum.Timestamp))).split(' ')[4]} <b>Lämpötila</b> {temphum.Temp}°C <b>Ilmankosteus</b> {temphum.Hum}% 
-    </div>
+    </div>*/
+    
   })
 
   return (
