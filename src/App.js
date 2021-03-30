@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
 import Chart from "react-google-charts";
- 
+import Header from './components/layout/Header';  
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Portfolio from './components/Portfolio';
+
 function App() {
   const initWeather = []; //tulevia filtteröintejä varten
   const [weather, setWeather] = useState(initWeather);
@@ -41,27 +44,24 @@ function App() {
   })
 
   return (
+    <Router>
     <div className="App">
-    {rows()}
-     <div>
+    <Header />
+    <Switch>
+      <Route path="/portfolio">
+              <Portfolio />
+      </Route>        
+      <Route path= "/">
+      
+      {rows()}
+      <div>
       <Chart
         width={1400}
         height={300}
         chartType="ColumnChart"
         loader={<div>Loading Chart</div>}
-        data={[
-          ['Aika', '%'],
-          ['klo', 81],
-          ['klo', 37],
-          ['klo', 26],
-          ['klo', 20],
-          ['klo', 15],
-          ['klo', 15],
-          ['klo', 15],
-          ['klo', 15],
-          ['klo', 15],
-          ['klo', 15],
-        ]}
+        data={chartHumData}
+
         options={{
           title: 'Ilmankosteus',
           //chartArea: { width: '50%' },
@@ -72,27 +72,16 @@ function App() {
           
         }}
         legendToggle
-    />
-    </div>
-    <div style={{ display: 'flex', }}>
+        />
+        </div>
+        <div style={{ display: 'flex', }}>
           <Chart
         width={1400}
         height={300}
         chartType="LineChart"
         loader={<div>Loading Chart</div>}
-        data={[
-          ['Aika', 'Lämpötila'],
-          ['klo', 10],
-          ['klo', 11],
-          ['klo', 16],
-          ['klo', 10],
-          ['klo', 10],
-          ['klo', 10],
-          ['klo', 10],
-          ['klo', 10],
-          ['klo', 10],
-          ['klo', 10],
-        ]}
+        data={chartTempData
+        }
         options={{
           title: 'Lämpötila',
           hAxis: { title: 'Lämpötila °C', titleTextStyle: { color: '#333' } },
@@ -101,9 +90,14 @@ function App() {
           //chartArea: { width: '50%', height: '70%' },
           // lineWidth: 25
         }}
-  />
-</div>
+    />
+
+  <a href="https://github.com/PenttilaTommi/S-AsemanK-ytt-liittym-/blob/master/README.md"   target= "_BLANK" rel= "noopener noreferrer" >Projektin README </a>
+        </div>
+        </Route>
+      </Switch>
     </div>
+  </Router>
   );
 }
 
