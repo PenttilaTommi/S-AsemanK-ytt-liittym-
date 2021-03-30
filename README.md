@@ -15,9 +15,11 @@ IoT, internet of things eli Asioiden internet. Internetin kaikki jo nykyään ti
 
 ### - Laitteistot
 
-Piirilevynä projektia opetellessa on toiminut ProjetBoard harjoituspiirilevy. Tähän on liitettynä Particlen IoT-Photoni jossa wifi toiminto ja laitteen äly. Lämpötilaa ja ilmankosteutta mittaa DHT11 anturi joka siirtää datan photonille edellen lähetettäväksi verkkoon.
+
 
 ### - Komponentit
+
+Piirilevynä projektia opetellessa on toiminut ProjetBoard harjoituspiirilevy. Tähän on liitettynä Particlen IoT-Photoni jossa wifi toiminto ja laitteen äly. Lämpötilaa ja ilmankosteutta mittaa DHT11 anturi joka siirtää datan photonille edellen lähetettäväksi verkkoon.
 
 ###  - Palvelut
 
