@@ -10,25 +10,52 @@ IoT, internet of things eli Asioiden internet. Internetin kaikki jo nykyään ti
 ## Sääasemajärjestelmän toimintakaavio
 
 
-
+![kaavio](/WeatherStationFormulaPic.JPG)
 
 
 ### - Laitteistot
+
+Sääaseman älynä toimii Particlen Photon- IoT kehityskortti. Se on WiFi yhteydellä toimiva kortti jossa on 120Mhz kellotaajuudella toimiva ARM Cortex M3 prosessori, jossa on 128KB käyttömuistia ja 1MB flashmuisti. Ohessa Kuva photonin kytkentänavoista ja linkki lähteeseen.
+
+![alt text](/PhotonPinnit.JPG)
+
+https://www.electronicwings.com/particle/particle-photon-board
 
 
 
 ### - Komponentit
 
-Piirilevynä projektia opetellessa on toiminut ProjetBoard harjoituspiirilevy. Tähän on liitettynä Particlen IoT-Photoni jossa wifi toiminto ja laitteen äly. Lämpötilaa ja ilmankosteutta mittaa DHT11 anturi joka siirtää datan photonille edellen lähetettäväksi verkkoon.
+Piirilevynä projektia opetellessa on toiminut ProjetBoard harjoituspiirilevy. Tässä on liitettynä Particlen IoT-Photoni ja Lämpötilaa ja ilmankosteutta mittaa DHT11 anturi joka siirtää datan photonille edellen lähetettäväksi verkkoon. Anturi on tarkoitettu sisätilojen ilmankosteuden ja lämpötilan mittaukseen ja sillä pystyy mittaamaan Ilmankosteuksia 20-80% skaalalla ja Lämpötiloja 0-50°C skaalalla.
+
+
 
 ###  - Palvelut
 
--Particle console
--MS Azure
+Sääasema käyttää MS Azure pilvipalveluita. Pilvipalveluiden helppoutena on valmiit ja toimivat palvelut, eikä tarvitse perustaa omaa palvelinta tälle projektille. Isojen palveluntarjoajien kanssa on kuitenkin syytä muistaa että kaikki tiedot ovat teknisesti palvelustarjoajan käytössä. Luonnollisesti he eivät niitä saisi käyttää, mutta asia on hyvä tiedostaa vaikka mahdollisen tietomurron varalta.
 
 ### - Ohjelmointi
 
-Ohjelmointi kieliä on projektissa käytetty useita. Photonin koodaukseen on käyttetty kieli on C++. Käyttöliittymä on koodattu Reactilla joka yhdistää HTML:n, CSS:n sekä javaSkriptin. Lisäksi Triggerit on koodattu CSharpilla. 
+Ohjelmointi kieliä on projektissa käytetty useita. Photonin koodaukseen on käyttetty kieli on C++. Tässä photoni on ohjelmoitu huolimaan dataa DHT11 anturista määrätyin väliajoin ja lähettämään sitä WiFin yli particlen consoleen.
+
+![..](/Photonc++1.JPG)
+![..](/photonc++2.JPG)
+
+Täältä Http Triggerit siirtää tiedon microsoft Azuren pilveen josta se jatkaa matkaa käyttöliittymälle. nämä triggerit on koodattu CSharpilla.
+
+![alt text](/HTC#1.JPG)
+![alt text](/HTC#2.JPG)
+![alt text](/HTC#3.JPG)
+![alt text](/HTC#4.JPG)
+
+Käyttöliittymä on koodattu Reactilla joka yhdistää HTML:n, CSS:n sekä javaSkriptin. 
+
+![alt text](/React1.JPG)
+![alt text](/React2.JPG)
+![alt text](/React3.JPG)
+
+
+
+ 
 
 ### - Toiminta
 

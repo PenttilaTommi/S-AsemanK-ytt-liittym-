@@ -1,0 +1,100 @@
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+  display:none;
+}
+body{
+background-color: rgb(93, 205, 233);
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:normal;
+  line-height:25px; 
+  font-size:15px;
+  }
+  
+  .post{
+    
+    width: 80%;
+    margin: auto;
+    text-align:center;
+    border:2px solid; 
+    color: #433A5F;
+    background-color: whitesmoke;
+    border-radius:10px;
+    padding:10px;
+    box-sizing:border-box;
+    }
+
+  .post2{
+    border:2px solid; 
+    color: #433A5F;
+    background-color: rgb(228, 228, 240);
+    border-radius:10px;
+    padding:10px;
+    box-sizing:border-box;
+    width: 80%;
+    text-align:center;
+    margin: auto;
+    }
+
+
+
+  .post3{
+    
+    background-image: url("maisema.jpg");
+    background-position:xpos 30% ypos 80%;
+    color: white;
+    border:2px solid; 
+    border-radius:10px;
+    padding:10px;
+    box-sizing:border-box;
+    width: 80%;
+    margin: auto;
+    
+  }
+  
+  .luistelu{
+  display: block;
+  margin-left: auto;
+  margin-right: 60px;
+  width: 40%; 
+  }
+
+  .post4{
+    border:2px solid; 
+    color: rgb(16, 15, 17);
+    border-radius:10px;
+    padding:10px;
+    box-sizing:border-box;
+    width: 80%;
+    margin: auto;
+  }
+
+  .Nortti{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%; 
+  }
+
+  
+  .alue1{ 
+    width: 70%; 
+    text-align: center;
+    margin:auto;
+    /*miksi borderin värin vaihtaminen vaihtaa myös tekstin värin?*/
+    border:10px solid double; 
+    color:  #433A5F;
+    border-radius:80px;
+    border-style: double;
+    padding:10px;
+    background-color: rgb(155, 241, 41);
+  }
+  .alue2{
+    text-align: center;
+  }
+
+
+  

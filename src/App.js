@@ -4,6 +4,7 @@ import Chart from "react-google-charts";
 import Header from './components/layout/Header';  
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Portfolio from './components/Portfolio';
+//import './style.css';
 
 function App() {
   const initWeather = []; //tulevia filtteröintejä varten
