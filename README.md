@@ -27,6 +27,8 @@ https://www.electronicwings.com/particle/particle-photon-board
 
 Piirilevynä projektia opetellessa on toiminut ProjetBoard harjoituspiirilevy. Tässä on liitettynä Particlen IoT-Photoni ja Lämpötilaa ja ilmankosteutta mittaa DHT11 anturi joka siirtää datan photonille edellen lähetettäväksi verkkoon. Anturi on tarkoitettu sisätilojen ilmankosteuden ja lämpötilan mittaukseen ja sillä pystyy mittaamaan Ilmankosteuksia 20-80% skaalalla ja Lämpötiloja 0-50°C skaalalla.
 
+![DHT11](/DHT11.JPG)
+
 
 
 ###  - Palvelut
@@ -64,15 +66,24 @@ Käyttöliittymää varten Ohjelmoidaan jälleen trigger joka rakentaa tietovara
 
 ### - Toiminta
 
-DHT11 anturi mittaa lämmön ja ilmankosteuden. Tuo sen samassa piirilevyssä olevalle photonille joka on yhteydessä particlen consoliin. Consoli vie datan Azurelle johon on koodattu tietovarasto josta se lähetetään edellen kyttöliittymälle johon on koodattu HTML sivu mikä palvelee loppukäytäjää luettavana tietona anturin lähettämästä datasta.
+Harjoituspiirilevyssä oleva DHT11 anturi mittaa lämmön ja ilmankosteuden. Data siirtyy samassa piirilevyssä olevalle photonille, johon on koodattu käsky lähettää data particlen consoleen. Consolista data ja laitteen id siirtyy MS Azurelle. Samalla lähtee Webhook kutsu Azurelle koodatulle triggerille aina kun uusi mittaustulos saadaan. Trigger tallentaa tulleen datan pilvipalvelun Table storageen. Loppukäyttäjän Käyttöliittymä kutsuu samaisella Azurella toista triggeriä joka rakentaa Table storageen tallennetusta datasta JSON muotoisen rajapinnan ja lähettää datan trigger kutsun ULR:ssa. Käyttöliittymään on koodattu Googlen charts palvelusta taulukot joissa anturin mittaama data näkyy diagrammeissa ihmiselle ymmärrettävässä muodossa. Järjestelmän versionhallinta on toteutettu GitHub palvelussa. palvelussa on rakennettu ci/cd (=continuous integration / continuous deployment) pipeline pilvipalvelu Azureen, jossa käyttöliittymä on julkaistuStatic Web App palveluna. Näin kaikki versiomuutokset päivittyy automaattisesti palvelimelle.
+
 
 ## Käytetyt kehitysympäristöt
 
+-particle console
+  Consolessa koodattiin photonin käyttämä koodi ja se ylläpitää sääaseman yhteyttä edelleen kohti Azurea.
 -Repl.it
+  Täällä koodattiin kayttöliittymä ja tarvittavat triggerit.
 -GitHub
--React
+  Toimii versionhallintana.
+-Microsoft Azure
+  Maksullinen pilvipalvelu johon on luotu kyky käyttää, tallentaa ja siirtää dataa em. palveluihin. 
 
 ## Termihakemisto
+
+Tähän en nyt tiedä mitä kuuluisi kirjoittaa....
+
 
 
 
