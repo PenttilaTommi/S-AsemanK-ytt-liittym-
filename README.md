@@ -40,18 +40,23 @@ Ohjelmointi kieliä on projektissa käytetty useita. Photonin koodaukseen on kä
 ![phc++1](/Photonc++1.JPG)
 ![phc++2](/photonc++2.JPG)
 
-Täältä Http Triggerit siirtää tiedon microsoft Azuren pilveen josta se jatkaa matkaa käyttöliittymälle. nämä triggerit on koodattu CSharpilla.
+Seuravaksi on koodattu HTTP trigger CSharpilla:lla joka tallentaa anturin datan tietovarastoon microsoft Azuren pilveen.
 
 ![triggerkoodi1](/HTC#1.JPG)
 ![triggerkoodi2](/HTC#2.JPG)
-![triggerkoodi3](/HTC#3.JPG)
-![triggerkoodi4](/HTC#4.JPG)
 
-Käyttöliittymä on koodattu Reactilla joka yhdistää HTML:n, CSS:n sekä javaSkriptin. 
+
+Loppukäyttäjää varten on koodattu Käyttöliittymä Reactilla joka yhdistää HTML:n, CSS:n sekä javaSkriptin. Käyttöliittymään piirrtään kaaviot jotka muotoutuu Azuren lähettämästä Json datasta.
 
 ![Reactkoodi1](/React1.JPG)
 ![Reactkoodi2](/React2.JPG)
 ![Reactkoodi3](/React3.JPG)
+
+Käyttöliittymää varten Ohjelmoidaan jälleen trigger joka rakentaa tietovaraston datasta rajapinnan käyttöliittymän käyttöön.
+
+
+![triggerkoodi3](/HTC#3.JPG)
+![triggerkoodi4](/HTC#4.JPG)
 
 
 
