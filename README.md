@@ -37,21 +37,21 @@ Sääasema käyttää MS Azure pilvipalveluita. Pilvipalveluiden helppoutena on 
 
 Ohjelmointi kieliä on projektissa käytetty useita. Photonin koodaukseen on käyttetty kieli on C++. Tässä photoni on ohjelmoitu huolimaan dataa DHT11 anturista määrätyin väliajoin ja lähettämään sitä WiFin yli particlen consoleen.
 
-![..](/Photonc++1.JPG)
-![..](/photonc++2.JPG)
+![phc++1](/Photonc++1.JPG)
+![phc++2](/photonc++2.JPG)
 
 Täältä Http Triggerit siirtää tiedon microsoft Azuren pilveen josta se jatkaa matkaa käyttöliittymälle. nämä triggerit on koodattu CSharpilla.
 
-![alt text](/HTC#1.JPG)
-![alt text](/HTC#2.JPG)
-![alt text](/HTC#3.JPG)
-![alt text](/HTC#4.JPG)
+![triggerkoodi1](/HTC#1.JPG)
+![triggerkoodi2](/HTC#2.JPG)
+![triggerkoodi3](/HTC#3.JPG)
+![triggerkoodi4](/HTC#4.JPG)
 
 Käyttöliittymä on koodattu Reactilla joka yhdistää HTML:n, CSS:n sekä javaSkriptin. 
 
-![alt text](/React1.JPG)
-![alt text](/React2.JPG)
-![alt text](/React3.JPG)
+![Reactkoodi1](/React1.JPG)
+![Reactkoodi2](/React2.JPG)
+![Reactkoodi3](/React3.JPG)
 
 
 
