@@ -120,7 +120,7 @@ Yritysjohdon opas IoT:n ja teollisen internetin hyödyntämiseen Quva Oy & Elisa
 Digia API:t ovat modernin integraatio srategian ydin:
 https://blog.digia.com/rest-api#ce37a412
 
-Wikopedia, Webhook.
+Wikipedia, Webhook.
 https://en.wikipedia.org/wiki/Webhook
 
 
