@@ -25,9 +25,15 @@ https://www.electronicwings.com/particle/particle-photon-board
 
 ### - Komponentit
 
-Piirilevynä projektia opetellessa on toiminut ProjetBoard harjoituspiirilevy. Tässä on liitettynä Particlen IoT-Photoni ja Lämpötilaa ja ilmankosteutta mittaa DHT11 anturi joka siirtää datan photonille edellen lähetettäväksi verkkoon. Anturi on tarkoitettu sisätilojen ilmankosteuden ja lämpötilan mittaukseen ja sillä pystyy mittaamaan Ilmankosteuksia 20-80% skaalalla ja Lämpötiloja 0-50°C skaalalla.
+
+
+Piirilevynä projektia opetellessa on toiminut ProjetBoard harjoituspiirilevy. Tässä on liitettynä Particlen IoT-Photoni ja Lämpötilaa ja ilmankosteutta mittaa DHT11 anturi joka siirtää datan photonille edellen lähetettäväksi verkkoon. Anturi on tarkoitettu sisätilojen ilmankosteuden ja lämpötilan mittaukseen ja sillä pystyy mittaamaan Ilmankosteuksia 20-80% skaalalla ja Lämpötiloja 0-50°C skaalalla. DHT11 on tyypiltään tunteva anturi.
 
 ![DHT11](/DHT11.JPG)
+
+Järjestelmään olisi mahdollista asentaa useita muitakin antureita tarpeiden mukaan. Kuulevaa anturia voisi käyttää tunnistamaan aanen voimakkuutta ja taajutta esimerkiksi lasin rikkoutumisen tunnistamiseksi. Haistavaa anturia pystyisi hyödyntämään vaikkapa savukaasujen tai joidenkin kemikaalien havaitsemiseksi. Myös kamera on eräänlainen anturi. Näkevää anturia yleensä hyödynnetään tilojen valvonnassa. 
+
+
 
 
 
@@ -82,14 +88,38 @@ Harjoituspiirilevyssä oleva DHT11 anturi mittaa lämmön ja ilmankosteuden. Dat
 
 ## Termihakemisto
 
-Tähän en nyt tiedä mitä kuuluisi kirjoittaa....
+IoT: 
+Asioiden internet. Laitteet ovat keskenään yhteydessä verkon             välityksellä.
+
+IIoT: 
+Teollinen asioiden internet.
+
+Particle Photon: 
+Particle yhtymän ohjelmoitava IoT-kehityskortti. Pieni                   prosessori joka koodatan suorittamaan annettuja                          tehtäviä ja lähettämään tehtävän tuoma data verkkoon.
+
+DHT11: 
+Lämpötilaa ja ilmankosteutta mittaava anturi.
+
+WEbhook: 
+Koodi jolla data lähetetään automaattisesti eteenpäin                    välitömästi mittaustapahtuman jälkeen 
+(viitattu 7.4.2021)
+
+REST API:
+Infratsuktuuri joka rakentaa rajapinnan käyttöliittymän käytettävksi
+(viitattu 7.4.2021)
 
 
 
 
 ## Viitteet
 
-Yritysjohdon opas IoT:n ja teollisen internetin hyödyntämiseen Quva Oy & Elisa Oyj
+Yritysjohdon opas IoT:n ja teollisen internetin hyödyntämiseen Quva Oy & Elisa Oyj: https://quva.fi/site/attachments/yritysjohdon_opas_IoT_ja_teollisen_internetin_hyodyntamiseen.pdf
+
+Digia API:t ovat modernin integraatio srategian ydin:
+https://blog.digia.com/rest-api#ce37a412
+
+Wikopedia, Webhook.
+https://en.wikipedia.org/wiki/Webhook
 
 
 
