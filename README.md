@@ -51,6 +51,7 @@ Ohjelmointi kieliä on projektissa käytetty useita. Photonin koodaukseen on kä
 Seuravaksi on koodattu HTTP trigger CSharpilla:lla joka tallentaa anturin datan tietovarastoon microsoft Azuren pilveen.
 
 ![triggerkoodi1](/HTC#1.JPG)
+
 ![triggerkoodi2](/HTC#2.JPG)
 
 
@@ -64,6 +65,7 @@ Käyttöliittymää varten Ohjelmoidaan jälleen trigger joka rakentaa tietovara
 
 
 ![triggerkoodi3](/HTC#3.JPG)
+
 ![triggerkoodi4](/HTC#4.JPG)
 
 
