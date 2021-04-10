@@ -50,9 +50,9 @@ Ohjelmointi kieliä on projektissa käytetty useita. Photonin koodaukseen on kä
 
 Seuravaksi on koodattu HTTP trigger CSharpilla:lla joka tallentaa anturin datan tietovarastoon microsoft Azuren pilveen.
 
-![triggerkoodi1](/HTC%1.JPG)
+![triggerkoodi1](/HTC1.JPG)
 
-![triggerkoodi2](/HTC%2.JPG)
+![triggerkoodi2](/HTC2.JPG)
 
 
 Loppukäyttäjää varten on koodattu Käyttöliittymä Reactilla joka yhdistää HTML:n, CSS:n sekä javaSkriptin. Käyttöliittymään piirrtään kaaviot jotka muotoutuu Azuren lähettämästä Json datasta.
@@ -64,9 +64,9 @@ Loppukäyttäjää varten on koodattu Käyttöliittymä Reactilla joka yhdistä�
 Käyttöliittymää varten Ohjelmoidaan jälleen trigger joka rakentaa tietovaraston datasta rajapinnan käyttöliittymän käyttöön.
 
 
-![triggerkoodi3](/HTC%3.JPG)
+![triggerkoodi3](/HTC3.JPG)
 
-![triggerkoodi4](/HTC%4.JPG)
+![triggerkoodi4](/HTC4.JPG)
 
 
 
