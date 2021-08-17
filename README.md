@@ -31,7 +31,7 @@ Piirilevynä projektia opetellessa on toiminut ProjetBoard harjoituspiirilevy. T
 
 ![DHT11](/DHT11.JPG)
 
-Järjestelmään olisi mahdollista asentaa useita muitakin antureita tarpeiden mukaan. Kuulevaa anturia voisi käyttää tunnistamaan aanen voimakkuutta ja taajutta esimerkiksi lasin rikkoutumisen tunnistamiseksi. Haistavaa anturia pystyisi hyödyntämään vaikkapa savukaasujen tai joidenkin kemikaalien havaitsemiseksi. Myös kamera on eräänlainen anturi. Näkevää anturia yleensä hyödynnetään tilojen valvonnassa. 
+Järjestelmään olisi mahdollista asentaa useita muitakin antureita tarpeiden mukaan. Kuulevaa anturia voisi käyttää tunnistamaan aanen voimakkuutta ja taajutta esimerkiksi lasin rikkoutumisen tunnistamiseksi. Haistavaa anturia pystyisi hyödyntämään vaikkapa savukaasujen tai joidenkin kemikaalien havaitsemiseksi. Myös kamera on eräänlainen anturi. Näkevää anturia yleensä hyödynnetään tilojen valvonnassa.  
 
 
 
